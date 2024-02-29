@@ -1,0 +1,243 @@
+/* CUERPO GENERAL */
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.contenido__cuerpo{
+	padding-top: 65px;
+}
+body{
+	font-family: Arial;
+}
+/* FIN CUERPO GENERAL  */
+
+/* Estilo Menu */
+header{
+	position: fixed;
+	width: 100%;
+	box-shadow: 2px 2px 7px rgb(56, 56, 56);
+    -webkit-box-shadow: 2px 2px 7px rgb(56, 56, 56);
+    -moz-box-shadow: 2px 2px 7px rgb(56, 56, 56);
+}
+.logoEsq{
+	display: none;
+}
+.logoEsqMov{
+		display: block;
+		position: fixed;
+	    top:2.5px;
+	    left: 5%;
+	    font-size: 100%;
+	    z-index: 100;
+	}
+.nav-bar{
+	background: #0f75bc;
+	padding-top: 20px;
+	padding-left: 89%;
+	padding-bottom: 20px;
+	display: block;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1.5em;
+	width: 100%;
+}
+.menu, .submenu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	background: #555555;
+	width: 100%;
+	margin-left: 100%;
+	transition: all 0.5s;
+	display: none;
+}
+.menu__link{
+	display: block;
+	padding: 15px;
+	color: #FFF;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+.submenu{
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.submenu .menu__link{
+	background: #393939;
+	padding-left: 40px;
+}
+.menu__link:hover{
+	background: #252525;
+}
+.mostrar{
+	/*transition: all 0.5s;*/
+	display: block;
+	margin-left: 0;
+}
+.ifMenu{
+	width: 100% !important;
+}
+/* Fin Menu  */
+
+/* Portada//Galeria */
+.GaleriaPortada{
+	background-image: url('../images/PortPlant3.png');
+	background-size: cover;
+	width: 100%;
+	min-height: 600px;
+
+}
+.GaleriaPortada h1{
+	font-size: 300%;
+	padding-top: 85px;
+}
+.GaleriaPortada img{
+	display: block;
+	width: 320px;
+	margin-top: -20px;
+}
+/* FIN PORTADA//GALERIA */
+
+/* SPAN ELIGE PRODUCTO */
+.ElgProd{
+	background-color: #404040;
+	color: #efefef;
+}
+.ElgProd h1{
+	font-size: 200%;
+}
+.EligeProd{
+	display: flex;
+	flex-wrap: wrap;
+}
+.in-flex{
+	flex: 1;
+	min-width:280px; /*Por defecto: 335px;*/
+}
+.in-flex:first-child{
+	flex: 2;
+	padding: 25px;
+	margin: 20px;
+	margin-bottom: 0px;
+	background-color: #626262;
+}
+.in-flex div{
+	padding: 25px;
+	margin: 20px;
+	background-color: #787878;
+}
+/* FIN SPAN ELIGE PRODUCTO */
+
+/* Sec Elige Marca */
+.ElgMarc{
+	background: url('../images/FondoAzul2.png');
+	width: 100%;
+	color: #FFF;
+}
+.ElgMarc h1{
+	font-size: 200%;
+}
+.ElgMarc img{
+	width: 33%;
+	margin: 13px;
+}
+/* Fin Sec Elige Marca */
+
+/* BARRA FINAL  */
+.FinalPag{
+	background: #151515;
+	width: 100%;
+	color: #BBBBBB;
+}
+.FinalPag a{
+	color: #BBBBBB;
+}
+.ifFooter{
+	width: 100% !important;
+	height: 379px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+/* FIN BARRA FINAL  */
+
+
+/* Inicio diseno PC */
+@media(min-width:727px){
+	/* CUERPO GENERAL PC  */
+	.contenido__cuerpo{
+	padding-top: 52px;
+	}
+	/* PORTADA//GALERIA PC */
+	.GaleriaPortada{
+		background-size: cover;
+		width: 100%;
+		min-height: 700px;
+	}
+	.GaleriaPortada h1{
+		font-size: 350%;
+		padding-top: 100px;
+	}
+	.GaleriaPortada img{
+		width: 300px;
+		margin-top: 7px;
+	}
+	/* Menu PC */
+	.logoEsq{
+		display: block;
+		position: fixed;
+	    top:0px;
+	    left: 5%;
+	    font-size: 100%;
+	    z-index: 100;
+	}
+	.logoEsqMov{
+		display: none;
+	}
+	.main-nav{
+		float: right;
+		padding-right: 5%;
+		background-color: #555555;
+		padding-left: 100%;
+	}
+	.nav-bar{
+		display: none;
+	}
+	.menu{
+		margin-left: 0;
+		display: flex;
+	}
+	.container-submenu{
+		position: relative;
+	}
+	.submenu{
+		position: absolute;
+		top: 52px;
+		overflow: visible;
+		z-index: 90;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.container-submenu:hover .submenu{
+		opacity: 1;
+		visibility: visible;
+	}
+	/* Fin Menu PC */
+
+	/* Sec Elige Marca PC */
+	.ElgMarc img{
+		width: 13%;
+		margin: 30px;
+	}
+	/* Fin Sec Elige Marca PV */
+
+	/* Span Elige Prod */
+	.in-flex:first-child{
+		margin-bottom: 20px;
+	}
+	/* Fin Span Eligr Prod  */
+}
